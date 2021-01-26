@@ -27,7 +27,10 @@ const withDrawBtn=document.getElementById("addWithdrawAmountId");
 withDrawBtn.addEventListener("click",function(){
 
  const withDrawNumber=getInputNumber("withdrawAmountId");
- console.log(withDrawNumber);
+  updateSpanText("currentWithdrawId",withDrawNumber);
+  updateSpanText("currentBalance",-1*withDrawNumber);
+
+  document.getElementById("withdrawAmountId").value="";
 
 })
 
